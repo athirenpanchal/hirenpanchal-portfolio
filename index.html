@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hiren Panchal | Social Listening &amp; Online Reputation</title>
+<meta name="description" content="7 years in ORM, social listening and competitive intelligence. Sprinklr consultant. Worked with Reliance Jio, Paytm, Plum Goodness and PharmEasy. Mumbai.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👂</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F1F4F8;--card:#fff;--ink:#14213D;--mute:#5B6780;--line:#D9E0EA;--acc:#2F5BEA;--pos:#17896A;--neg:#CF3E4B;--neu:#7B8599;
+--d:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;--b:'IBM Plex Sans','Segoe UI',system-ui,sans-serif}
+@media(prefers-color-scheme:dark){:root{--bg:#0F1626;--card:#172038;--ink:#E8EDF7;--mute:#9AA6C0;--line:#26314F;--acc:#7C9BFF;--pos:#3FCB9F;--neg:#FF7A85;--neu:#8D97AE}}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--b)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--acc);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+nav b{font:800 19px var(--d)}
+nav div a{text-decoration:none;margin-left:20px;font-size:15px;color:var(--mute)}
+nav div a:hover{color:var(--ink)}
+h1,h2,h3{font-family:var(--d);line-height:1.08;letter-spacing:-.02em}
+h1{font-size:clamp(38px,6.4vw,68px);font-weight:800}
+h2{font-size:clamp(28px,4vw,40px);font-weight:700;margin-bottom:10px}
+section{padding:72px 0}
+.lede{color:var(--mute);max-width:56ch;margin-bottom:28px}
+.hero{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center;padding:56px 0 40px}
+.hero p{margin:20px 0 26px;color:var(--mute);max-width:46ch;font-size:19px}
+.btn{display:inline-block;padding:13px 22px;border-radius:999px;font:700 16px var(--d);text-decoration:none;border:2px solid var(--ink);margin:0 10px 10px 0}
+.btn.p{background:var(--ink);color:var(--bg)}
+.btn:hover{background:var(--acc);border-color:var(--acc);color:#fff}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:0 12px 40px -18px rgba(20,33,61,.35)}
+.ph{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font:700 15px var(--d)}
+.live{display:inline-flex;align-items:center;gap:7px;font:500 13px var(--b);color:var(--mute);cursor:pointer;background:none;border:0}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--pos)}
+.on .dot{animation:pulse 1.6s infinite}
+@keyframes pulse{50%{opacity:.25}}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.chip{border:1.5px solid var(--line);background:transparent;color:var(--ink);border-radius:999px;padding:5px 13px;font:500 14px var(--b);cursor:pointer}
+.chip[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.bar{display:flex;height:10px;border-radius:99px;overflow:hidden;background:var(--line);margin-bottom:6px}
+.bar i{display:block;transition:width .5s}
+.legend{display:flex;gap:16px;font-size:13px;color:var(--mute);margin-bottom:12px}
+.feed{list-style:none;padding:0;min-height:292px}
+.feed li{display:flex;gap:10px;padding:10px 0;border-top:1px solid var(--line);font-size:15px;line-height:1.45}
+.feed li.new{animation:in .5s}
+@keyframes in{from{opacity:0;transform:translateY(-8px)}}
+.tag{flex:none;width:8px;border-radius:4px;align-self:stretch}
+.th{display:block;font-size:12px;color:var(--mute)}
+.note{font-size:13px;color:var(--mute);margin-top:8px}
+.try{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+textarea{width:100%;min-height:120px;resize:vertical;border:1.5px solid var(--line);border-radius:14px;padding:14px;font:17px/1.5 var(--b);background:var(--card);color:var(--ink)}
+.res{font:800 34px var(--d)}
+.res small{font:400 15px var(--b);color:var(--mute);display:block}
+mark{border-radius:4px;padding:0 3px;color:#fff}
+mark.p{background:var(--pos)}mark.n{background:var(--neg)}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.tab{border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:12px;padding:10px 18px;font:700 16px var(--d);cursor:pointer}
+.tab[aria-selected=true]{background:var(--acc);border-color:var(--acc);color:#fff}
+.brand{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.brand h3{font-size:28px;margin-bottom:6px}
+.pill{display:inline-block;border:1px solid var(--line);border-radius:99px;padding:3px 12px;font-size:14px;margin:0 6px 6px 0;color:var(--mute)}
+.stat{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:34px}
+.stat div{border-left:3px solid var(--acc);padding-left:14px}
+.stat b{font:800 40px var(--d);display:block;line-height:1}
+.stat span{font-size:14px;color:var(--mute)}
+.skills{display:flex;flex-wrap:wrap;gap:10px}
+.sk{border:1.5px solid var(--line);background:var(--card);border-radius:12px;padding:9px 16px;font:500 16px var(--b);cursor:pointer;color:var(--ink)}
+.sk[aria-expanded=true]{border-color:var(--acc);box-shadow:0 0 0 3px color-mix(in srgb,var(--acc) 25%,transparent)}
+#skd{margin-top:16px;min-height:56px;max-width:62ch;color:var(--mute)}
+.tl{border-left:2px solid var(--line);padding-left:24px;margin-left:6px}
+.tl>div{position:relative;margin-bottom:26px}
+.tl>div:before{content:"";position:absolute;left:-32px;top:8px;width:14px;height:14px;border-radius:50%;background:var(--acc);border:3px solid var(--bg)}
+.tl h3{font-size:21px}.tl span{font-size:14px;color:var(--mute)}
+.contact{background:var(--ink);color:var(--bg);border-radius:24px;padding:48px 34px;text-align:center}
+.contact h2{color:var(--bg)}
+.contact p{max-width:48ch;margin:0 auto 24px;opacity:.8}
+.contact .btn{border-color:var(--bg);color:var(--bg)}
+.contact .btn.p{background:var(--bg);color:var(--ink)}
+footer{padding:30px 0 50px;color:var(--mute);font-size:14px;text-align:center}
+@media(max-width:820px){.hero,.try,.brand{grid-template-columns:1fr}nav div a:not(:last-child){display:none}.stat b{font-size:32px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><b>Hiren Panchal</b><div><a href="#try">Try it</a><a href="#brands">Brands</a><a href="#skills">Skills</a><a href="#path">Experience</a><a href="#contact">Contact</a></div></div></nav>
+
+<main class="wrap">
+<header class="hero">
+  <div>
+    <h1>I listen to millions of brand conversations so teams don’t have to guess.</h1>
+    <p>Seven years in online reputation management, competitive intelligence and Sprinklr consulting, for Jio, Paytm, Plum Goodness and PharmEasy.</p>
+    <a class="btn p" href="#contact">Let’s talk</a><a class="btn" href="#try">Try the listener</a>
+  </div>
+  <div class="panel" id="live">
+    <div class="ph"><span>Live brand mentions</span><button class="live on" id="tog" aria-pressed="true"><i class="dot"></i><span>Live</span></button></div>
+    <div class="chips" id="chips" role="group" aria-label="Filter by sentiment"></div>
+    <div class="bar" aria-hidden="true"><i id="bp" style="background:var(--pos)"></i><i id="bn" style="background:var(--neu)"></i><i id="bg" style="background:var(--neg)"></i></div>
+    <div class="legend"><span id="lp"></span><span id="ln"></span><span id="lg"></span></div>
+    <ul class="feed" id="feed" aria-live="off"></ul>
+    <p class="note">Illustrative sample mentions, not real client data. Tap a filter to slice the stream.</p>
+  </div>
+</header>
+
+<section id="try">
+  <h2>Try the listener</h2>
+  <p class="lede">Paste any customer comment. A simple rule-based tagger scores it the way a first-pass social listening model would, then shows why.</p>
+  <div class="try">
+    <div><label for="in" class="note" style="display:block;margin:0 0 6px">Customer comment</label>
+    <textarea id="in">Loved the new packaging but delivery was late and support never replied.</textarea>
+    <p class="note">Runs entirely in your browser. Nothing is sent anywhere.</p></div>
+    <div class="panel"><div class="res" id="out"></div><p id="why" style="margin-top:12px"></p></div>
+  </div>
+</section>
+
+<section id="brands">
+  <h2>Brands I’ve worked on</h2>
+  <p class="lede">Different sectors, different audiences, one habit: find the signal early and get it to the right team.</p>
+  <div class="tabs" role="tablist" id="tabs"></div>
+  <div class="panel brand" id="bp2" role="tabpanel"></div>
+</section>
+
+<section id="skills">
+  <h2>What I bring</h2>
+  <div class="stat">
+    <div><b data-n="7">0</b><span>years across ORM, listening and CX</span></div>
+    <div><b data-n="40" data-s="%">0</b><span>faster issue resolution at Paytm through structured escalation</span></div>
+    <div><b data-n="98" data-s="%">0</b><span>positive customer feedback at PharmEasy</span></div>
+  </div>
+  <p class="lede">Tap a skill to see how I use it.</p>
+  <div class="skills" id="sk"></div>
+  <p id="skd" aria-live="polite"></p>
+</section>
+
+<section id="path">
+  <h2>Experience</h2>
+  <div class="tl">
+    <div><h3>Associate Consultant, Sprinklr Managed Services</h3><span>Enhanced Software Solutions Pvt. Ltd. · Jun 2025 – Present</span>
+    <p>Sprinklr platform specialist. I onboard client teams, configure Care and Social modules, build listening streams and tagging, test thoroughly before go-live, and handle post-deployment changes, training and KPI reporting.</p></div>
+    <div><h3>Senior BRM Executive (contract)</h3><span>Reliance Jio · Oct 2024 – Mar 2025</span>
+    <p>Brand reputation and competitive intelligence for telecom: daily Locobuzz analysis, Twitter Pro monitoring, risk escalations and competitor reports.</p></div>
+    <div><h3>Senior Quality Assurance Associate</h3><span>Paytm · Nov 2022 – Jul 2024</span>
+    <p>ORM and social listening at scale: 92% positive sentiment, 40% faster resolution, 95% SLA resolution rate.</p></div>
+    <div><h3>Customer Care Executive</h3><span>Plum Goodness · Jan 2022 – Nov 2022</span>
+    <p>Reputation and engagement for a D2C beauty brand: 95% positive satisfaction, 30% better engagement efficiency.</p></div>
+    <div><h3>Customer Delight Officer</h3><span>PharmEasy · Apr 2019 – Jan 2022</span>
+    <p>Customer experience and brand management: 98% positive feedback and repeated top-performer recognition.</p></div>
+    <div><h3>Customer Support Representative</h3><span>OnFees · May 2018 – Nov 2018</span>
+    <p>Helped build the support function of an ed-tech startup from scratch, including IVR selection and training material.</p></div>
+    <div><h3>B.Sc. Computer Science</h3><span>Asmita College of B.Sc. IT and Comp. Science, Vikhroli · Mumbai University</span></div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact">
+    <h2>Have a brand worth listening to?</h2>
+    <p>I’m open to social listening and analytics roles, in Mumbai or remote. Say hello and I’ll reply quickly.</p>
+    <a class="btn p" id="em" href="mailto:athirenpanchal@gmail.com">Email me</a><a class="btn" id="li" href="https://www.linkedin.com/in/hiren-j-panchal">LinkedIn</a>
+  </div>
+</section>
+</main>
+<footer>© 2026 Hiren Panchal · hirenpanchal.in</footer>
+
+<script>
+// ===== EDIT THESE =====
+const CONFIG={email:"athirenpanchal@gmail.com",linkedin:"https://www.linkedin.com/in/hiren-j-panchal"};
+document.getElementById('em').href='mailto:'+CONFIG.email;
+document.getElementById('li').href=CONFIG.linkedin;
+
+// ---- live feed ----
+const M=[
+["Support sorted my refund in one chat. Impressive.","p","Customer care"],
+["Third time the app has crashed during checkout.","g","Product"],
+["Prices went up again with no notice.","g","Pricing"],
+["Got my order a day early, packaging was lovely.","p","Delivery"],
+["Anyone know the offer end date?","n","Pricing"],
+["Waiting 6 days for a reply. Not okay.","g","Customer care"],
+["New feature is smooth and actually useful.","p","Product"],
+["Payment went through but order shows pending.","g","Payments"],
+["Switched from a competitor last month, no regrets.","p","Product"],
+["Is the new store open on Sundays?","n","Customer care"],
+["Cashback arrived instantly. Great experience.","p","Payments"],
+["Delivery partner was rude and left it outside.","g","Delivery"]];
+const C={p:'var(--pos)',n:'var(--neu)',g:'var(--neg)'},N={p:'Positive',n:'Neutral',g:'Negative'};
+let flt='all',i=6,live=true,shown=M.slice(0,6).reverse();
+const feed=document.getElementById('feed'),chips=document.getElementById('chips');
+['all','p','n','g'].forEach(k=>{const b=document.createElement('button');b.className='chip';b.textContent=k=='all'?'All':N[k];b.setAttribute('aria-pressed',k=='all');b.onclick=()=>{flt=k;[...chips.children].forEach(c=>c.setAttribute('aria-pressed',c===b));draw()};chips.appendChild(b)});
+function draw(fresh){
+  const list=shown.filter(m=>flt=='all'||m[1]==flt).slice(0,5);
+  feed.innerHTML=list.map((m,x)=>`<li class="${fresh&&x==0?'new':''}"><i class="tag" style="background:${C[m[1]]}"></i><div>${m[0]}<span class="th">${m[2]} · ${N[m[1]]}</span></div></li>`).join('')||'<li>No mentions match this filter yet.</li>';
+  const t=shown.length,c=k=>shown.filter(m=>m[1]==k).length,pc=k=>Math.round(c(k)/t*100);
+  bp.style.width=pc('p')+'%';bn.style.width=pc('n')+'%';bg.style.width=pc('g')+'%';
+  lp.textContent='Positive '+pc('p')+'%';ln.textContent='Neutral '+pc('n')+'%';lg.textContent='Negative '+pc('g')+'%';
+}
+setInterval(()=>{if(!live)return;shown.unshift(M[i%M.length]);i++;if(shown.length>24)shown.pop();draw(true)},3200);
+tog.onclick=()=>{live=!live;tog.classList.toggle('on',live);tog.setAttribute('aria-pressed',live);tog.lastChild.textContent=live?'Live':'Paused'};
+draw();
+
+// ---- sentiment tester ----
+const POS="love,loved,great,good,amazing,excellent,fast,smooth,helpful,happy,best,impressive,lovely,easy,quick,thanks,perfect,awesome,recommend".split(',');
+const NEG="late,slow,bad,worst,terrible,rude,never,broken,crash,refund,delay,delayed,angry,disappointed,poor,issue,scam,waste,cancel,pending,fail,failed,unhappy,hate".split(',');
+const inp=document.getElementById('in');
+function score(){
+  const tx=inp.value;let p=0,n=0;
+  const html=tx.replace(/[A-Za-z']+/g,w=>{const l=w.toLowerCase();if(POS.includes(l)){p++;return `<mark class="p">${w}</mark>`}if(NEG.includes(l)){n++;return `<mark class="n">${w}</mark>`}return w});
+  const s=p-n,lab=!p&&!n?'Neutral':s>0?'Positive':s<0?'Negative':'Mixed';
+  out.innerHTML=`${lab}<small>${p} positive signal${p==1?'':'s'}, ${n} negative</small>`;
+  out.style.color=lab=='Positive'?'var(--pos)':lab=='Negative'?'var(--neg)':'var(--ink)';
+  why.innerHTML=html||'Type something to analyse.';
+  if(lab=='Mixed')why.innerHTML+='<span class="note" style="display:block">Mixed comments are where analysts earn their keep: a model sees a tie, a person sees which part to escalate.</span>';
+}
+inp.oninput=score;score();
+
+// ---- brands ----
+const B=[
+["Reliance Jio","Telecom · Senior BRM Executive · Oct 2024 – Mar 2025","Real-time reputation monitoring across YouTube, Reddit, Quora, X, Instagram, Facebook and news. Daily competitive intelligence on Airtel, Vi and BSNL, with risk escalations backed by data and source links.",["Share of voice","Competitor reports","Risk escalation","Locobuzz","Twitter Pro"]],
+["Paytm","Fintech · Senior QA Associate · Nov 2022 – Jul 2024","Led reputation monitoring and sentiment analysis in Sprinklr, with weekly reports that shaped brand messaging. Worked with PR, Marketing and Support on one consistent brand voice.",["92% positive sentiment on 70+ daily mentions","40% faster issue resolution","95% SLA resolution rate"]],
+["Plum Goodness","D2C Beauty · Customer Care Executive · 2022","Managed reputation across social and review platforms for a fast-growing beauty brand, and turned customer feedback into product and content ideas.",["95% positive satisfaction","30% better engagement efficiency","Competitor benchmarking"]],
+["PharmEasy","D2C Health · Customer Delight Officer · 2019 – 2022","Handled high-priority concerns and corporate clients, built feedback systems and wrote best-practice documentation for the team. Recognised as a top-quality performer over multiple cycles.",["98% positive customer feedback","Feedback analysis","Team documentation"]]];
+const tabs=document.getElementById('tabs'),bp2=document.getElementById('bp2');
+function showB(k){[...tabs.children].forEach((t,x)=>t.setAttribute('aria-selected',x==k));const b=B[k];
+bp2.innerHTML=`<div><h3>${b[0]}</h3><span class="pill">${b[1]}</span><p style="margin-top:10px">${b[2]}</p></div><div><p class="note" style="margin:0 0 8px">What I focus on</p>${b[3].map(s=>`<span class="pill" style="color:var(--ink)">${s}</span>`).join('')}</div>`}
+B.forEach((b,k)=>{const t=document.createElement('button');t.className='tab';t.role='tab';t.textContent=b[0];t.onclick=()=>showB(k);tabs.appendChild(t)});showB(0);
+
+// ---- skills ----
+const S={"Sprinklr configuration":"I onboard new client teams end to end: requirements, design, UAT and go-live. I build Care and Social setups from scratch, including queues, ticket routing, SLA rules and escalation workflows.","Social listening":"Streams, keyword tracking, sentiment rules and tagging frameworks built around each team’s brand monitoring and reporting needs.","Competitive intelligence":"Daily competitor reports at Jio covering mention volume, platform split, sentiment, issue categories and PR alerts across Airtel, Vi and BSNL.","Sentiment and tonal analysis":"Weekly Sprinklr reports at Paytm that went beyond the score and directly influenced brand strategy and messaging.","Crisis management":"Escalation frameworks that cut issue resolution time by 40% at Paytm, and early flagging of viral complaints and influencer posts at Jio.","Stakeholder reporting":"KPI reports on response times, resolution rates and team productivity, written so brand and CX leads can act on them.","Tools":"Sprinklr, Locobuzz, Twitter Pro, Freshdesk, One Direct, Google Analytics, Microsoft Office and Google Workspace."};
+const sk=document.getElementById('sk'),skd=document.getElementById('skd');
+Object.keys(S).forEach(k=>{const b=document.createElement('button');b.className='sk';b.textContent=k;b.setAttribute('aria-expanded','false');b.onclick=()=>{[...sk.children].forEach(c=>c.setAttribute('aria-expanded',c===b));skd.textContent=S[k]};sk.appendChild(b)});
+sk.firstChild.click();
+
+// ---- counters ----
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(!x.isIntersecting)return;io.unobserve(x.target);const t=+x.target.dataset.n;let v=0;const id=setInterval(()=>{x.target.textContent=++v+(x.target.dataset.s||"");if(v>=t)clearInterval(id)},Math.max(15,1400/t))}),{threshold:.6});
+document.querySelectorAll('[data-n]').forEach(e=>io.observe(e));
+</script>
+</body>
+</html>
