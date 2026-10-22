@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hiren Panchal | Listening Console</title>
+<meta name="description" content="Social listening, ORM and competitive intelligence specialist. 7 years. Sprinklr consultant. Mumbai.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📡</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Sora:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--bg:#0A101C;--c:#111A2C;--c2:#16213A;--l:#233250;--ink:#E9EEF8;--mu:#93A1BE;--acc:#2DD4BF;--am:#F5B544;--p:#34D399;--n:#7C8AA8;--g:#FB7185;
+--s:'Sora','Segoe UI',system-ui,sans-serif;--m:'IBM Plex Mono',ui-monospace,Consolas,monospace}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:radial-gradient(900px 500px at 85% -10%,#12304a55,transparent),var(--bg);color:var(--ink);font:400 16px/1.6 var(--s)}
+:focus-visible{outline:3px solid var(--am);outline-offset:3px;border-radius:8px}
+.w{max-width:1120px;margin:0 auto;padding:0 18px}
+.bar{position:sticky;top:0;z-index:5;background:#0A101Ccc;backdrop-filter:blur(10px);border-bottom:1px solid var(--l)}
+.bar .w{display:flex;justify-content:space-between;align-items:center;height:54px;font:500 13px var(--m);color:var(--mu)}
+.bar b{color:var(--ink);font:800 16px var(--s)}
+.st{display:flex;align-items:center;gap:8px}.st i{width:8px;height:8px;border-radius:50%;background:var(--p);animation:pl 1.6s infinite}
+@keyframes pl{50%{opacity:.25}}
+.g{display:grid;gap:16px;margin:16px 0}
+.c{background:var(--c);border:1px solid var(--l);border-radius:16px;padding:20px;min-width:0}
+.lb{font:500 12px var(--m);color:var(--acc);letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px;display:flex;justify-content:space-between}
+h1{font-size:clamp(32px,5.4vw,54px);line-height:1.08;font-weight:800;letter-spacing:-.02em}
+h1 em{font-style:normal;color:var(--acc)}
+.sub{color:var(--mu);margin:16px 0 22px;max-width:46ch}
+.bt{display:inline-block;padding:12px 20px;border-radius:10px;font:600 15px var(--s);text-decoration:none;border:1px solid var(--l);color:var(--ink);margin:0 8px 8px 0}
+.bt.p{background:var(--acc);color:#05231F;border-color:var(--acc)}
+.bt:hover{border-color:var(--am);color:var(--am)}.bt.p:hover{background:var(--am);color:#2b1c00}
+.h2{grid-template-columns:1.15fr 1fr}.k4{grid-template-columns:repeat(4,1fr)}.h3{grid-template-columns:1.1fr .9fr}
+.kp b{font:800 38px var(--s);color:var(--ink);display:block;line-height:1.1}.kp span{font:400 13px var(--m);color:var(--mu)}
+.kp{border-top:3px solid var(--acc)}.kp:nth-child(2){border-color:var(--am)}.kp:nth-child(3){border-color:var(--p)}.kp:nth-child(4){border-color:var(--g)}
+.ch{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.cp{border:1px solid var(--l);background:transparent;color:var(--ink);border-radius:99px;padding:4px 12px;font:500 12px var(--m);cursor:pointer}
+.cp[aria-pressed=true]{background:var(--acc);color:#05231F;border-color:var(--acc)}
+.mx{display:flex;gap:18px;align-items:center;margin-bottom:10px}
+.dn{width:84px;height:84px;border-radius:50%;position:relative;flex:none;transition:background .6s}
+.dn:after{content:attr(data-t);position:absolute;inset:11px;border-radius:50%;background:var(--c);display:grid;place-items:center;font:500 14px var(--m)}
+.lg{font:400 12px var(--m);color:var(--mu);display:grid;gap:2px}
+.fd{list-style:none;padding:0;min-height:262px}
+.fd li{display:flex;gap:10px;padding:9px 0;border-top:1px solid var(--l);font-size:14px;line-height:1.45}
+.fd li.nw{animation:in .5s}@keyframes in{from{opacity:0;transform:translateY(-8px)}}
+.tg{flex:none;width:4px;border-radius:3px}.th{display:block;font:400 11px var(--m);color:var(--mu)}
+.tl{display:grid;gap:8px}
+.tr{display:grid;grid-template-columns:96px 1fr;gap:10px;align-items:center;font:400 12px var(--m);color:var(--mu);background:none;border:0;text-align:left;cursor:pointer;color:inherit;padding:0}
+.trk{position:relative;height:30px;background:#0d1627;border-radius:8px}
+.bb{position:absolute;top:3px;bottom:3px;border-radius:6px;background:var(--l);transition:background .25s,transform .25s;transform-origin:left;animation:gr .9s both}
+@keyframes gr{from{transform:scaleX(0)}}
+.tr:hover .bb{background:#35507f}.tr[aria-pressed=true] .bb{background:var(--acc)}.tr[aria-pressed=true]{color:var(--ink)}
+.ax{display:grid;grid-template-columns:96px 1fr;gap:10px;font:400 11px var(--m);color:var(--mu)}
+.ax div{display:flex;justify-content:space-between}
+.dt{border-top:1px solid var(--l);margin-top:16px;padding-top:16px;min-height:250px}
+.dt .co{font:500 12px var(--m);color:var(--am);text-transform:uppercase;letter-spacing:.08em}
+.dt h3{font-size:24px;margin:4px 0 2px;line-height:1.2}.dt .wn{color:var(--mu);font:400 13px var(--m);margin-bottom:12px}
+.ms{display:flex;gap:24px;flex-wrap:wrap;margin-bottom:10px}.ms b{font:800 32px var(--s);color:var(--acc);display:block;line-height:1}.ms span{font:400 11px var(--m);color:var(--mu);display:block;max-width:15ch;line-height:1.3;margin-top:3px}
+.dt ul{list-style:none;padding:0;max-width:70ch}.dt li{padding:4px 0 4px 20px;position:relative;font-size:15px;animation:up .5s both}
+.dt li:before{content:"›";position:absolute;left:4px;color:var(--acc);font-weight:800}
+@keyframes up{from{opacity:0;transform:translateY(10px)}}
+.pl{display:inline-block;border:1px solid var(--l);border-radius:99px;padding:2px 11px;font:400 12px var(--m);color:var(--mu);margin:0 6px 6px 0}
+.cl{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;justify-content:center;min-height:190px}
+.cl button{background:none;border:0;cursor:pointer;font-family:var(--s);font-weight:600;color:var(--acc);padding:2px;transition:transform .2s,color .2s}
+.cl button:nth-child(3n){color:var(--am)}.cl button:nth-child(3n+1){color:var(--ink)}
+.cl button:hover,.cl button[aria-pressed=true]{transform:scale(1.15);color:var(--p)}
+#cd{margin-top:12px;color:var(--mu);font-size:14px;min-height:66px}
+textarea{width:100%;min-height:100px;resize:vertical;background:#0d1627;color:var(--ink);border:1px solid var(--l);border-radius:12px;padding:12px;font:15px/1.5 var(--s)}
+.rs{font:800 30px var(--s);margin:10px 0 4px}.rs small{display:block;font:400 12px var(--m);color:var(--mu)}
+mark{border-radius:4px;padding:0 3px;color:#04130e}mark.p{background:var(--p)}mark.n{background:var(--g)}
+.nt{font:400 12px var(--m);color:var(--mu);margin-top:8px}
+.ct{text-align:center;padding:36px 20px;background:linear-gradient(135deg,#0f3a3a,#111A2C)}
+.ct h2{font-size:clamp(26px,4vw,38px);margin-bottom:10px}.ct p{color:var(--mu);max-width:46ch;margin:0 auto 20px}
+footer{padding:24px 0 44px;text-align:center;color:var(--mu);font:400 12px var(--m)}
+@media(max-width:820px){.h2,.h3{grid-template-columns:1fr}.k4{grid-template-columns:1fr 1fr}.tr,.ax{grid-template-columns:70px 1fr}.bar .st span{display:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.dt li{opacity:1}}
+</style>
+</head>
+<body>
+<div class="bar"><div class="w"><b>HIREN PANCHAL</b><div class="st"><i></i><span>LISTENING CONSOLE · MUMBAI · OPEN TO ROLES</span></div></div></div>
+<main class="w">
+
+<div class="g h2">
+  <div class="c" style="display:flex;flex-direction:column;justify-content:center">
+    <div class="lb">Profile</div>
+    <h1>I turn brand chatter into <em>decisions</em>.</h1>
+    <p class="sub">Seven years in ORM, social listening and competitive intelligence. Sprinklr consultant. Worked on Vantara, Paytm, Plum Goodness and PharmEasy.</p>
+    <div><a class="bt p" href="#contact">Let’s talk</a><a class="bt" href="#path">View experience</a></div>
+  </div>
+  <div class="c">
+    <div class="lb"><span>Live mention stream</span><span id="lv" style="cursor:pointer" role="button" tabindex="0">● LIVE</span></div>
+    <div class="ch" id="ch" role="group" aria-label="Filter by sentiment"></div>
+    <div class="mx"><div class="dn" id="dn"></div><div class="lg"><span id="a1"></span><span id="a2"></span><span id="a3"></span></div></div>
+    <ul class="fd" id="fd"></ul>
+    <p class="nt">Illustrative sample mentions, not client data.</p>
+  </div>
+</div>
+
+<div class="g k4">
+  <div class="c kp"><b data-c="7">0</b><span>YEARS IN ORM + LISTENING</span></div>
+  <div class="c kp"><b data-c="40" data-s="%">0</b><span>FASTER ISSUE RESOLUTION, PAYTM</span></div>
+  <div class="c kp"><b data-c="98" data-s="%">0</b><span>POSITIVE FEEDBACK, PHARMEASY</span></div>
+  <div class="c kp"><b data-c="95" data-s="%">0</b><span>SLA RESOLUTION RATE, PAYTM</span></div>
+</div>
+
+<div class="c" id="path">
+  <div class="lb"><span>Experience timeline</span><span>TAP A BAR</span></div>
+  <div class="tl" id="tl"></div>
+  <div class="ax"><span></span><div><span>2018</span><span>2020</span><span>2022</span><span>2024</span><span>2026</span></div></div>
+  <div class="dt" id="dt" aria-live="polite"></div>
+</div>
+
+<div class="g h3">
+  <div class="c">
+    <div class="lb"><span>Skill cloud</span><span>TAP A WORD</span></div>
+    <div class="cl" id="cl"></div><p id="cd"></p>
+  </div>
+  <div class="c">
+    <div class="lb">Try the listener</div>
+    <label for="in" class="nt" style="display:block;margin:0 0 6px">Paste a customer comment</label>
+    <textarea id="in">Loved the new packaging but delivery was late and support never replied.</textarea>
+    <div class="rs" id="out"></div><p id="why"></p>
+  </div>
+</div>
+
+<div class="g h3">
+  <div class="c"><div class="lb">Education</div>
+    <h3 style="font-size:22px">B.Sc. Computer Science</h3>
+    <p style="color:var(--mu)">Asmita College of B.Sc. IT and Comp. Science, Vikhroli, Mumbai · Mumbai University</p></div>
+  <div class="c"><div class="lb">Tools</div>
+    <span class="pl">Sprinklr</span><span class="pl">Locobuzz</span><span class="pl">Twitter Pro</span><span class="pl">Freshdesk</span><span class="pl">One Direct</span><span class="pl">Google Analytics</span><span class="pl">MS Office</span><span class="pl">Google Workspace</span></div>
+</div>
+
+<div class="c ct" id="contact">
+  <h2>Have a brand worth listening to?</h2>
+  <p>Open to social listening and analytics roles, in Mumbai or remote.</p>
+  <a class="bt p" id="em" href="#">Email me</a><a class="bt" id="li" href="#">LinkedIn</a>
+</div>
+</main>
+<footer>© 2026 Hiren Panchal · hirenpanchal.in</footer>
+
+<script>
+const EMP="Vantara";
+document.getElementById('em').href='mailto:athirenpanchal@gmail.com';
+document.getElementById('li').href='https://www.linkedin.com/in/hiren-j-panchal';
+const $=id=>document.getElementById(id);
+
+// live feed
+const M=[["Support sorted my refund in one chat. Impressive.","p","Customer care"],["Third time the app has crashed during checkout.","g","Product"],["Prices went up again with no notice.","g","Pricing"],["Got my order a day early, packaging was lovely.","p","Delivery"],["Anyone know the offer end date?","n","Pricing"],["Waiting 6 days for a reply. Not okay.","g","Customer care"],["New feature is smooth and actually useful.","p","Product"],["Payment went through but order shows pending.","g","Payments"],["Switched from a competitor last month, no regrets.","p","Product"],["Is the new store open on Sundays?","n","Customer care"],["Cashback arrived instantly. Great experience.","p","Payments"],["Delivery partner was rude and left it outside.","g","Delivery"]];
+const C={p:'var(--p)',n:'var(--n)',g:'var(--g)'},N={p:'Positive',n:'Neutral',g:'Negative'};
+let fl='all',ix=6,live=true,sh=M.slice(0,6).reverse();
+['all','p','n','g'].forEach(k=>{const b=document.createElement('button');b.className='cp';b.textContent=k=='all'?'All':N[k];b.setAttribute('aria-pressed',k=='all');b.onclick=()=>{fl=k;[...$('ch').children].forEach(c=>c.setAttribute('aria-pressed',c===b));draw()};$('ch').appendChild(b)});
+function draw(f){
+ const l=sh.filter(m=>fl=='all'||m[1]==fl).slice(0,5);
+ $('fd').innerHTML=l.map((m,x)=>`<li class="${f&&x==0?'nw':''}"><i class="tg" style="background:${C[m[1]]}"></i><div>${m[0]}<span class="th">${m[2].toUpperCase()} · ${N[m[1]].toUpperCase()}</span></div></li>`).join('')||'<li>No mentions match this filter yet.</li>';
+ const t=sh.length,c=k=>Math.round(sh.filter(m=>m[1]==k).length/t*100),p=c('p'),n=c('n');
+ $('dn').style.background=`conic-gradient(var(--p) 0 ${p}%,var(--n) ${p}% ${p+n}%,var(--g) ${p+n}% 100%)`;$('dn').dataset.t=p+'%';
+ $('a1').textContent='● Positive '+p+'%';$('a2').textContent='● Neutral '+n+'%';$('a3').textContent='● Negative '+(100-p-n)+'%';
+}
+setInterval(()=>{if(!live)return;sh.unshift(M[ix%M.length]);ix++;if(sh.length>24)sh.pop();draw(true)},3200);
+const lv=$('lv');lv.onclick=()=>{live=!live;lv.textContent=live?'● LIVE':'❚❚ PAUSED'};lv.onkeydown=e=>{if(e.key=='Enter'||e.key==' ')lv.click()};
+draw();
+
+// timeline
+const R=[
+{co:"Enhanced Software Solutions Pvt. Ltd.",lb:"Sprinklr",t:"Associate Consultant, Sprinklr Managed Services",w:"Jun 2025 – Present",a:2025.42,z:2026.8,m:[],c:["Sprinklr Care","Sprinklr Social","UAT","SLA rules","Zero-defect go-lives"],b:["Onboard new client teams end to end: requirements, configuration design, UAT and live deployment","Build Care and Social setups from scratch: queues, ticket routing, SLA rules and escalation workflows","Create listening streams, keyword tracking, sentiment rules and tagging frameworks for each team","Manage change requests, train stakeholders and report on service KPIs"]},
+{co:EMP,lb:EMP,t:"Senior BRM Executive (contract)",w:"Oct 2024 – Mar 2025",a:2024.75,z:2025.2,m:[],c:["Daily EOD report","Locobuzz","Share of voice","Risk escalation"],b:["Hired for ORM and listening at Vantara; with limited brand chatter, I widened listening to Jio, its competitors and Ambani family conversations","Created and owned the daily end-of-day competitor analysis report for senior leadership, built from Locobuzz data","Covered sentiment, share of voice, daily chatter, demographics, word cloud and the top 10 hashtags and keywords","Showed where Jio leads, where competitors lead and what to improve, in a clean, presentable document"]},
+{co:"Paytm",lb:"Paytm",t:"Senior Quality Assurance Associate",w:"Nov 2022 – Jul 2024",a:2022.87,z:2024.55,m:[[92,"%","positive sentiment on 70+ daily mentions"],[40,"%","faster issue resolution"],[95,"%","SLA resolution rate"]],c:[],b:["Sprinklr sentiment and tonal analysis with weekly reports that shaped brand messaging","Crisis protocols and structured escalation frameworks","Worked with PR, Marketing and Support on one consistent brand voice","Built a competitive analysis framework for share of voice"]},
+{co:"Plum Goodness",lb:"Plum",t:"Customer Care Executive",w:"Jan 2022 – Nov 2022",a:2022.0,z:2022.87,m:[[95,"%","positive customer satisfaction"],[30,"%","better engagement efficiency"]],c:[],b:["Sentiment tracking for real-time monitoring and trend spotting","Data-driven response strategies that cut average response time","Turned customer feedback into product and content improvements","Regular competitor benchmarking on reputation"]},
+{co:"PharmEasy",lb:"PharmEasy",t:"Customer Delight Officer",w:"Apr 2019 – Jan 2022",a:2019.25,z:2022.04,m:[[98,"%","positive customer feedback"]],c:["Top-quality performer"],b:["Managed brand reputation and corporate client relationships","Handled high-priority concerns with fast turnaround and empathy","Built structured feedback collection and analysis","Wrote best-practice documentation for engagement and brand response, supporting team training and consistent quality"]},
+{co:"OnFees",lb:"OnFees",t:"Customer Support Representative",w:"May 2018 – Nov 2018",a:2018.37,z:2018.87,m:[],c:["Ed-tech startup","IVR selection","Training documentation"],b:["Helped build the support function from the ground up","Selected IVR software and wrote training documentation","Supported students and parents with admission forms and MKCL registration","Coordinated with Relationship Managers on course and college queries"]}];
+const S0=2018.2,S1=2026.9;
+R.forEach((r,k)=>{const b=document.createElement('button');b.className='tr';b.setAttribute('aria-pressed','false');
+ const l=(r.a-S0)/(S1-S0)*100,w=Math.max(2.5,(r.z-r.a)/(S1-S0)*100);
+ b.innerHTML=`<span>${r.lb}</span><span class="trk"><i class="bb" style="left:${l}%;width:${w}%;animation-delay:${k*.1}s"></i></span>`;
+ b.onclick=()=>show(k);$('tl').appendChild(b)});
+function show(k){const r=R[k];[...$('tl').children].forEach((b,i)=>b.setAttribute('aria-pressed',i==k));
+ $('dt').innerHTML=`<div class="co">${r.co}</div><h3>${r.t}</h3><div class="wn">${r.w}</div>`+
+ (r.m.length?`<div class="ms">${r.m.map(m=>`<div><b data-c="${m[0]}" data-s="${m[1]}">0${m[1]}</b><span>${m[2]}</span></div>`).join('')}</div>`:'')+
+ (r.c.length?`<div>${r.c.map(c=>`<span class="pl">${c}</span>`).join('')}</div>`:'')+
+ `<ul>${r.b.map((b,i)=>`<li style="animation-delay:${.1+i*.1}s">${b}</li>`).join('')}</ul>`;
+ count($('dt'))}
+function count(root){root.querySelectorAll('[data-c]').forEach(e=>{const t=+e.dataset.c,s=e.dataset.s||'';let v=0;const id=setInterval(()=>{v++;e.textContent=v+s;if(v>=t)clearInterval(id)},Math.max(14,900/t))})}
+show(0);
+
+// skill cloud
+const W=[["Sprinklr",5,"Platform configuration, workflow design, Care and Social modules, SLA management, reporting, UAT and deployment."],["Social listening",5,"Streams, keyword tracking, sentiment rules and tagging frameworks built around each team’s monitoring needs."],["ORM",4,"Monitoring, response strategy, escalation and reporting across social and review platforms for "+EMP+", Paytm, Plum Goodness and PharmEasy."],["Competitive intelligence",4,"Built the daily end-of-day competitor report: sentiment, share of voice, chatter, demographics, word cloud, top 10 hashtags and keywords, and where to improve."],["Sentiment analysis",4,"Weekly Sprinklr sentiment and tonal reports at Paytm that influenced brand strategy and messaging."],["Share of voice",3,"Tracked daily shifts in conversation against Airtel, Vi and BSNL, and against competitors at Paytm."],["Crisis management",3,"Escalation frameworks that cut issue resolution time by 40% at Paytm."],["Locobuzz",3,"Daily keyword-wise sentiment, demographics, mention volume and top 10 keywords."],["Reporting",3,"KPI reports on response times, resolution rates and productivity that stakeholders can act on."],["SOPs and documentation",2,"Best-practice documentation at PharmEasy and training documents at OnFees."],["Training",2,"Trained internal stakeholders on Sprinklr best practices and workflow optimisation."],["Twitter Pro",2,"Keyword and account-level monitoring with risk-assessed escalations."],["UAT and go-live",2,"Thorough testing of configured workflows before live production."],["Tonal analysis",2,"Reading tone, not just score, to catch sarcasm and mixed comments."]];
+W.forEach((w,k)=>{const b=document.createElement('button');b.textContent=w[0];b.style.fontSize=(14+w[1]*4)+'px';b.setAttribute('aria-pressed','false');
+ b.onclick=()=>{[...$('cl').children].forEach(c=>c.setAttribute('aria-pressed',c===b));$('cd').textContent=w[2]};$('cl').appendChild(b)});
+$('cl').firstChild.click();
+
+// analyser
+const POS="love,loved,great,good,amazing,excellent,fast,smooth,helpful,happy,best,impressive,lovely,easy,quick,thanks,perfect,awesome,recommend".split(',');
+const NEG="late,slow,bad,worst,terrible,rude,never,broken,crash,refund,delay,delayed,angry,disappointed,poor,issue,scam,waste,cancel,pending,fail,failed,unhappy,hate".split(',');
+function sc(){let p=0,n=0;const h=$('in').value.replace(/[A-Za-z']+/g,w=>{const l=w.toLowerCase();if(POS.includes(l)){p++;return `<mark class="p">${w}</mark>`}if(NEG.includes(l)){n++;return `<mark class="n">${w}</mark>`}return w});
+ const lab=!p&&!n?'Neutral':p>n?'Positive':p<n?'Negative':'Mixed';
+ $('out').innerHTML=`${lab}<small>${p} positive, ${n} negative signals</small>`;$('out').style.color=lab=='Positive'?'var(--p)':lab=='Negative'?'var(--g)':'var(--ink)';
+ $('why').innerHTML=h+(lab=='Mixed'?'<span class="nt" style="display:block">Mixed comments are where analysts earn their keep: a model sees a tie, a person sees what to escalate.</span>':'')}
+$('in').oninput=sc;sc();
+
+// KPI counters
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){io.unobserve(x.target);count(x.target)}}),{threshold:.6});
+document.querySelectorAll('.kp b').forEach(e=>io.observe(e));
+</script>
+</body>
+</html>
